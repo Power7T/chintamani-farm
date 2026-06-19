@@ -742,8 +742,17 @@ footer {
 @media(max-width: 600px) {
   .features-grid { grid-template-columns: 1fr; }
   .about-highlights { grid-template-columns: 1fr; }
-  .hero-badges { bottom: 1rem; }
+  .hero-badges { bottom: 1rem; flex-wrap: wrap; justify-content: center; gap: 0.8rem; position: relative; margin-top: 3rem; }
   .hero-badge-sep { display: none; }
+  .about, .features, .gallery, .experience, .testimonials, .aha-section { padding: 4rem 0; }
+  .cta-section { padding: 5rem 0; }
+  .hero-title { font-size: clamp(2rem, 8vw, 3rem); }
+  .hero-desc { font-size: 1rem; }
+  .section-title { font-size: clamp(1.8rem, 6vw, 2.5rem); }
+  .aha-svg-wrap { height: 200px; }
+  .strip-item { font-size: 0.75rem; padding: 4px 10px; }
+  .hero-btns { flex-direction: column; width: 100%; }
+  .btn { width: 100%; justify-content: center; }
 }
 
 /* ===== AHA MOMENT INTERACTIVE SECTION ===== */
