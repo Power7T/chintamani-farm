@@ -10,7 +10,7 @@
 <meta property="og:image" content="images/hero.jpg">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Nunito:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 /* ===== DESIGN TOKENS ===== */
 :root {
@@ -18,8 +18,8 @@
   --green-mid:    #2d5a27;
   --green-light:  #4a8c3f;
   --green-pale:   #e8f4e5;
-  --amber:        #c98b2b;
-  --amber-light:  #f0c060;
+  --amber:        #e07a5f;
+  --amber-light:  #f4a261;
   --cream:        #faf7f0;
   --cream-dark:   #f0e8d5;
   --text-dark:    #1c2112;
@@ -48,7 +48,8 @@ body {
 }
 
 h1,h2,h3,h4 {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 800;
   line-height: 1.2;
 }
 
@@ -108,9 +109,9 @@ img { max-width: 100%; display: block; }
   justify-content: space-between;
 }
 .nav-logo {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.5rem;
-  font-weight: 600;
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 800;
   color: var(--white);
   transition: var(--transition);
   display: flex;
@@ -188,9 +189,9 @@ img { max-width: 100%; display: block; }
   inset: 0;
   background: linear-gradient(
     135deg,
-    rgba(15,28,10,0.72) 0%,
-    rgba(26,46,26,0.55) 50%,
-    rgba(15,28,10,0.4) 100%
+    rgba(15,28,10,0.6) 0%,
+    rgba(26,46,26,0.4) 50%,
+    rgba(15,28,10,0.3) 100%
   );
 }
 .hero-content {
@@ -222,16 +223,16 @@ img { max-width: 100%; display: block; }
   max-width: 50px;
 }
 .hero-title {
-  font-size: clamp(2.8rem, 6vw, 4.8rem);
-  font-weight: 600;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 800;
   color: var(--white);
-  line-height: 1.1;
+  line-height: 1.15;
   margin-bottom: 1.2rem;
   opacity: 0;
   transform: translateY(25px);
   animation: fadeUp 0.9s 0.35s forwards;
 }
-.hero-title em { color: var(--amber-light); font-style: italic; }
+.hero-title em { color: var(--amber-light); font-style: normal; }
 .hero-desc {
   font-size: 1.1rem;
   color: rgba(255,255,255,0.82);
@@ -288,8 +289,9 @@ img { max-width: 100%; display: block; }
   gap: 4px;
 }
 .hero-badge strong {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Nunito', sans-serif;
   font-size: 1.6rem;
+  font-weight: 800;
   line-height: 1;
   color: var(--amber-light);
 }
@@ -551,7 +553,7 @@ img { max-width: 100%; display: block; }
 }
 .review-card:hover { box-shadow: var(--shadow-md); transform: translateY(-4px); }
 .review-stars { font-size: 0.9rem; color: var(--amber); margin-bottom: 1rem; letter-spacing: 2px; }
-.review-text { font-style: italic; color: var(--text-mid); font-size: 0.96rem; line-height: 1.75; margin-bottom: 1.2rem; font-family: 'Cormorant Garamond', serif; font-size: 1.05rem; }
+.review-text { font-style: italic; color: var(--text-mid); font-size: 1rem; line-height: 1.75; margin-bottom: 1.2rem; font-family: 'Nunito', sans-serif; font-weight: 500; }
 .review-author { font-weight: 700; font-size: 0.88rem; }
 .review-origin { font-size: 0.78rem; color: var(--text-light); margin-top: 2px; }
 
