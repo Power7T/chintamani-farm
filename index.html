@@ -745,6 +745,17 @@ footer {
   .hero-badges { bottom: 1rem; }
   .hero-badge-sep { display: none; }
 }
+
+/* ===== AHA MOMENT INTERACTIVE SECTION ===== */
+.aha-section { padding: 6rem 0; background: var(--green-dark); position: relative; overflow: hidden; }
+.aha-inner { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 1.5rem; }
+.aha-controls { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; margin-top: 1rem; z-index: 2; position: relative; }
+.aha-btn { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.15); color: #fff; padding: 10px 24px; border-radius: 999px; cursor: pointer; font-size: 0.9rem; font-weight: 700; font-family: 'Nunito', sans-serif; transition: all 0.3s ease; }
+.aha-btn.active, .aha-btn:hover { background: var(--amber); border-color: var(--amber); box-shadow: 0 4px 16px rgba(224,122,95,0.4); transform: translateY(-2px); }
+.aha-svg-wrap { width: 100%; max-width: 480px; height: 280px; position: relative; background: rgba(0,0,0,0.2); border-radius: var(--radius-lg); overflow: hidden; border: 1px solid rgba(255,255,255,0.08); display: flex; align-items: center; justify-content: center; transition: all 0.6s ease; box-shadow: var(--shadow-lg); }
+.aha-svg-wrap svg { width: 100%; height: 100%; position: absolute; inset: 0; opacity: 0; transition: all 0.8s cubic-bezier(0.25, 1, 0.5, 1); transform: scale(0.95); }
+.aha-svg-wrap svg.active { opacity: 1; transform: scale(1); }
+.aha-label { font-size: 1.15rem; font-weight: 700; color: #fff; margin-top: 0.5rem; }
 </style>
 </head>
 <body>
@@ -812,12 +823,12 @@ footer {
     </div>
     <div class="hero-badge-sep"></div>
     <div class="hero-badge">
-      <strong>2 hr</strong>
-      <span>From Mumbai</span>
+      <strong>Easy</strong>
+      <span>Escape From Mumbai</span>
     </div>
     <div class="hero-badge-sep"></div>
     <div class="hero-badge">
-      <strong>100%</strong>
+      <strong>Fresh</strong>
       <span>Homemade Food</span>
     </div>
     <div class="hero-badge-sep"></div>
@@ -832,20 +843,20 @@ footer {
 <!-- Scrolling Strip -->
 <div class="intro-strip">
   <div class="strip-track">
-    <div class="strip-item">Chikoo & Mango Orchards</div>
-    <div class="strip-item">Homemade Konkan Food</div>
+    <div class="strip-item">Lush Green Surroundings</div>
+    <div class="strip-item">Homemade Food</div>
     <div class="strip-item">2 Min to Thal Beach</div>
     <div class="strip-item">Private Farmhouse Stay</div>
-    <div class="strip-item">2 Hrs from Mumbai</div>
+    <div class="strip-item">Quick Escape from Mumbai</div>
     <div class="strip-item">Fresh Farm Air</div>
     <div class="strip-item">Family Getaway</div>
     <div class="strip-item">Nature Walks</div>
     <!-- Duplicate for seamless loop -->
-    <div class="strip-item">Chikoo & Mango Orchards</div>
-    <div class="strip-item">Homemade Konkan Food</div>
+    <div class="strip-item">Lush Green Surroundings</div>
+    <div class="strip-item">Homemade Food</div>
     <div class="strip-item">2 Min to Thal Beach</div>
     <div class="strip-item">Private Farmhouse Stay</div>
-    <div class="strip-item">2 Hrs from Mumbai</div>
+    <div class="strip-item">Quick Escape from Mumbai</div>
     <div class="strip-item">Fresh Farm Air</div>
     <div class="strip-item">Family Getaway</div>
     <div class="strip-item">Nature Walks</div>
@@ -885,7 +896,7 @@ footer {
           <div class="highlight-item">
             <div class="highlight-icon">🍛</div>
             <div>
-              <h4>Homemade Konkan Food</h4>
+              <h4>Homemade Food</h4>
               <p>Fresh, authentic & cooked with love</p>
             </div>
           </div>
@@ -946,8 +957,78 @@ footer {
       </div>
       <div class="feature-card" data-reveal>
         <span class="feature-emoji">🚗</span>
-        <h3>Easy from Mumbai</h3>
-        <p>Just 2–2.5 hours from Mumbai via ferry or road. Perfect for a weekend escape without the exhausting journey.</p>
+        <h3>Easy Escape from Mumbai</h3>
+        <p>A smooth ride from Mumbai via ferry or road. Perfect for a weekend escape without an exhausting journey.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Aha Moment -->
+<section class="aha-section" id="vibe-check">
+  <div class="container">
+    <div class="aha-inner" data-reveal>
+      <div>
+        <span class="section-tag" style="background: rgba(240,192,96,0.15); color: var(--amber-light);">Experience The Contrast</span>
+        <h2 class="section-title" style="color:var(--white);">Leave The Chaos Behind</h2>
+      </div>
+      
+      <div class="aha-controls">
+        <button class="aha-btn active" data-vibe="city">City Life</button>
+        <button class="aha-btn" data-vibe="farm">Farm Serenity</button>
+      </div>
+
+      <div class="aha-svg-wrap" id="aha-bg">
+        <!-- City SVG -->
+        <svg id="svg-city" class="active" viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
+          <rect width="400" height="250" fill="#2d3436" />
+          <path d="M40 250 V120 H90 V250" fill="#636e72" />
+          <path d="M90 250 V60 H150 V250" fill="#b2bec3" />
+          <path d="M150 250 V140 H200 V250" fill="#636e72" />
+          <path d="M200 250 V80 H270 V250" fill="#b2bec3" />
+          <path d="M270 250 V150 H360 V250" fill="#636e72" />
+          <!-- Animated City Lights -->
+          <rect x="110" y="80" width="10" height="12" fill="#ffeaa7">
+            <animate attributeName="opacity" values="1;0.2;1" dur="2s" repeatCount="indefinite" />
+          </rect>
+          <rect x="130" y="100" width="10" height="12" fill="#ffeaa7">
+            <animate attributeName="opacity" values="0.2;1;0.2" dur="3s" repeatCount="indefinite" />
+          </rect>
+          <rect x="220" y="110" width="10" height="12" fill="#ffeaa7">
+            <animate attributeName="opacity" values="1;0.3;1" dur="1.5s" repeatCount="indefinite" />
+          </rect>
+          <rect x="240" y="90" width="10" height="12" fill="#ffeaa7">
+            <animate attributeName="opacity" values="0.3;1;0.3" dur="2.5s" repeatCount="indefinite" />
+          </rect>
+        </svg>
+
+        <!-- Farm SVG -->
+        <svg id="svg-farm" viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
+          <rect width="400" height="250" fill="#e8f4e5" />
+          <!-- Animated Sun -->
+          <circle cx="200" cy="110" r="45" fill="#f4a261">
+            <animate attributeName="r" values="45;55;45" dur="4s" repeatCount="indefinite"/>
+            <animate attributeName="opacity" values="0.8;0.4;0.8" dur="4s" repeatCount="indefinite"/>
+          </circle>
+          <circle cx="200" cy="110" r="40" fill="#f4a261" />
+          <!-- Smooth Hills -->
+          <path d="M-50 250 Q100 130 250 250 Z" fill="#4a8c3f" />
+          <path d="M150 250 Q300 110 450 250 Z" fill="#2d5a27" />
+          <!-- Small Farmhouse -->
+          <rect x="185" y="195" width="30" height="20" fill="#fff" />
+          <polygon points="180,195 200,180 220,195" fill="#e07a5f" />
+          <!-- Animated Birds -->
+          <path d="M80 70 Q90 60 100 70 Q90 65 80 70" fill="none" stroke="#2d5a27" stroke-width="2">
+            <animateTransform attributeName="transform" type="translate" values="0 0; 20 -10; 0 0" dur="6s" repeatCount="indefinite"/>
+          </path>
+          <path d="M120 90 Q130 80 140 90 Q130 85 120 90" fill="none" stroke="#2d5a27" stroke-width="2">
+            <animateTransform attributeName="transform" type="translate" values="0 0; -15 -5; 0 0" dur="5s" repeatCount="indefinite"/>
+          </path>
+        </svg>
+      </div>
+
+      <div>
+        <div class="aha-label" id="aha-title">Non-stop noise, concrete, and stress.</div>
       </div>
     </div>
   </div>
@@ -1093,7 +1174,7 @@ footer {
     <div class="footer-inner">
       <div class="footer-brand">
         <h3>Chintamani Farm</h3>
-        <p>A private cottage farmhouse stay in Thal, Alibaug, Maharashtra. Orchards, beach, homemade food — and genuine peace.</p>
+        <p>A private cottage farmhouse stay in Thal, Alibaug, Maharashtra. Nature, beach, homemade food — and genuine peace.</p>
       </div>
       <div class="footer-col">
         <h4>Quick Links</h4>
@@ -1108,11 +1189,11 @@ footer {
       <div class="footer-col">
         <h4>Nearby</h4>
         <ul>
-          <li><a href="#experience">Thal Beach (2 min)</a></li>
-          <li><a href="#experience">Alibaug Town (20 min)</a></li>
-          <li><a href="#experience">Murud-Janjira Fort (42 min)</a></li>
-          <li><a href="#experience">Mumbai (2 hrs)</a></li>
-          <li><a href="#experience">Mandwa Jetty (30 min)</a></li>
+          <li><a href="#experience">Thal Beach</a></li>
+          <li><a href="#experience">Alibaug Town</a></li>
+          <li><a href="#experience">Murud-Janjira Fort</a></li>
+          <li><a href="#experience">Mumbai (Ferry/Road)</a></li>
+          <li><a href="#experience">Mandwa Jetty</a></li>
         </ul>
       </div>
     </div>
@@ -1164,6 +1245,29 @@ revealEls.forEach(el => {
   el.style.transform = 'translateY(30px)';
   el.style.transition = 'opacity 0.7s ease, transform 0.7s ease';
   observer.observe(el);
+});
+
+// Aha Moment Logic
+const ahaBtns = document.querySelectorAll('.aha-btn');
+const svgCity = document.getElementById('svg-city');
+const svgFarm = document.getElementById('svg-farm');
+const ahaTitle = document.getElementById('aha-title');
+
+ahaBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    ahaBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    
+    if (btn.dataset.vibe === 'city') {
+      svgFarm.classList.remove('active');
+      svgCity.classList.add('active');
+      ahaTitle.textContent = "Non-stop noise, concrete, and stress.";
+    } else {
+      svgCity.classList.remove('active');
+      svgFarm.classList.add('active');
+      ahaTitle.textContent = "Breathe in the fresh coastal air & listen to the birds.";
+    }
+  });
 });
 </script>
 </body>
